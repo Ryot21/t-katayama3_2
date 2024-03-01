@@ -60,137 +60,51 @@
 
 	&.-f-slider,//スライダー
 	&.-f-view{  //ファーストビュー
+		position: relative;
 		width: 100%;
 		height: auto;
-		@include min(768){
-			// min-height: 480px;
-		}
-	}
-	&.-f-slider{// スライダー
-		position: relative;
 		.c-contentsBox{
 			position: absolute;
-			// ファーストビュー×スライダー関係
-			&.-f-title{
-				top: 27%;
-				left: 50%;
+			// TOPページ
+			&.-f-topTitle{
+				top: 50%;
+				left: 70%;
 				transform: translate(-50%, -50%);
-				width: 80%;
-				filter: drop-shadow(.5px .5px 0px #ffffff6c);
-				@include min(768){// tb
-					top: 50%;
-					left: 80%;
-					width: 33%;
-				}
-				@include min(1400){
-					top: 50%;
-					left: 70%;
-					width: 30%;
-				}
+				width: 30%;
 			}
-			&.-f-des{
-				bottom: 1px;
-				left: 90%;
-				transform: translateX(-50%);
-				white-space: nowrap;
-				// width: auto;
+			// 共通の大きさ・位置
+			&.-f-topTitle{
+				left: 60%;
+				width: 35%;
+				overflow: hidden;
+				&.-item01{top:5%;}
+				&.-item02{top:10%;}
+				&.-item03{top:15%;}
+				&.-item04{
+					top: 20%;
+					left: 69%;
+					width: 53%;
+				}
 				@include min(768){
-					left: 60%;
-					transform: scale(.8);
-				}
-				&.-w{
-					@include min(768){
-						left: 53%;
-					}
-					@include min(1400){
-						left: 72%;
-					}
-				}
-			}
-			&.-f-bird{
-				&_01{// 青
-					top: 20%;
-					left: 15%;
-					width: 5%;
-					@include min(768){// tb
-						top: 10%;
-						left: 2%;
-						width: 4%;
-					}
-					@include min(1400){// pc
-						top: 10%;
-						left: 15%;
-						width: 3%;
-					}
-				}
-				&_02{// うすい
-					top: 20%;
-					left: 23%;
-					width: 3%;
-					@include min(768){// tb
-						top: 7%;
-						left: 7%;
-						width: 3%;
-					}
-					@include min(1400){// pc
-						left: 18%;
-						width: 2%;
-					}
-				}
-				&_03{// 黄色
-					top: 35%;
-					left: 77%;
-					width: 5%;
-					@include min(768){// tb
-						top: 23.5%;
-						left: 91%;
-						width: 2%;
-					}
-					@include min(1400){// pc
-						top: 13.5%;
-						left: 78%;
-						width: 1.8%;
-					}
-				}
-				&_04{// 緑
-					@include min(768){// tb
-						top: 57%;
-						left: 65%;
-						width: 1.5%;
-					}
-					@include min(1400){// pc
-						top: 60%;
-						left: 56%;
-						width: 1%;
+					left: 65%;
+					width: 15%;
+					&.-item01{top:26%;}
+					&.-item02{top:39%;}
+					&.-item03{top:52%;}
+					&.-item04{
+						top:67%;
+						left: 69.1%;
+						width: 23%;
 					}
 				}
 			}
-			&.-f-border{
-				top: 36%;
-				left: 25%;
-				width: 50%;
-				@include min(768){// tb
-					top: 25%;
-					left: 67%;
-					width: 24%;
-				}
-				@include min(1400){// pc
-					top: 17%;
-					left: 60%;
-					width: 18%;
-				}
+			&.-f-topLogo{
+				bottom: 4%;
+				left: 52%;
+				transform: translateX(-50%);
+				width: 55%;
 			}
-		}
-	}
-	&.-f-view{//ファーストビュー
-		position: relative;
-		.imgBox{
-			@include max(768){
-				opacity: .75;
-			}
-		}
-		.c-contentsBox{
-			position: absolute;
+			// 下層ページのタイトルなど
 			&.-f-title{
 				top: 50%;
 				left: 50%;
@@ -266,15 +180,6 @@
 					width: 40% !important;
 				}
 			}
-			&.-f-logo_s{
-				@include max(768){
-					top: 10%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					width: 70%;
-					z-index: 1;
-				}
-			}
 			&.-f-des{
 				bottom: 0;
 				left: 85%;
@@ -291,85 +196,9 @@
 					}
 				}
 			}
-			&.-f-bird{
-				&_01{// 青
-					top: 20%;
-					left: 15%;
-					width: 5%;
-					@include min(768){// tb
-						top: 10%;
-						left: 2%;
-						width: 4%;
-					}
-					@include min(1400){// pc
-						top: 10%;
-						left: 15%;
-						width: 3%;
-					}
-				}
-				&_02{// うすい
-					top: 20%;
-					left: 23%;
-					width: 3%;
-					@include min(768){// tb
-						top: 7%;
-						left: 7%;
-						width: 3%;
-					}
-					@include min(1400){// pc
-						left: 18%;
-						width: 2%;
-					}
-				}
-				&_03{// 黄色
-					top: 35%;
-					left: 77%;
-					width: 5%;
-					@include min(768){// tb
-						top: 21%;
-						left: 84%;
-						width: 2.5%;
-					}
-					@include min(1400){// pc
-						top: 18%;
-						left: 87%;
-						width: 2%;
-					}
-				}
-				&_04{// 緑
-					@include min(768){// tb
-						top: 60%;
-						left: 57%;
-						width: 2.5%;
-					}
-					@include min(1400){// pc
-						top: 63%;
-						left: 53%;
-						width: 2.5%;
-					}
-				}
-			}
-			&.-f-border{
-				top: 36%;
-				left: 25%;
-				width: 50%;
-				@include min(768){// tb
-					top: 22%;
-					left: 63.5%;
-					width: 20%;
-				}
-				@include min(1400){// pc
-					top: 20%;
-					left: 65%;
-				}
-			}
-			&.-f-text{
-				bottom: 0;
-				left: 80%;
-				transform: scale(.9);
-			}
 		}
 	}
+
 
 
 	&.-imgBg{//背景画像
