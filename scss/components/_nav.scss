@@ -108,7 +108,7 @@
 			max-width: 330px;
 		}
 		li{
-			margin-bottom: 5px;
+			margin-bottom: 7px;
 			transition: 1s all;
 			@include min(768){margin-bottom: 10px;}
 			@include min(1400){margin-bottom: 10px;}
@@ -252,7 +252,7 @@
 .navItem{
 	position: relative;
 	&_main{
-		color: $site-color02;
+		color: $site-color01;
 		position: absolute;
 		top: 35%;
 		left: 50%;
@@ -262,7 +262,7 @@
 		@include min(768){top: 33%;}
 	}
 	&_main02{
-		color: $site-color02;
+		color: $site-color01;
 		position: absolute;
 		top: 35%;
 		left: 50%;
@@ -299,7 +299,7 @@
 		white-space: nowrap;
 		transition: .5s all;
 		@include min(768){top: 64%;}
-		@include min(1400){top: 60%;}
+		@include min(1400){top: 65%;}
 	}
 	&_footer{
 		// アクティブ時

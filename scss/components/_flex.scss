@@ -310,5 +310,24 @@
             }
             
         }
+
+        // 店名・距離 / タグ・営業時間
+        &_col1_2M1{
+            flex-wrap: wrap;
+            li{
+                &:nth-child(1){width: 100%;}
+                &:nth-child(2){width: 15%;}
+                &:nth-child(3){width: 85%;}
+
+                &:nth-child(2),
+                &:nth-child(3){
+                    margin: 0 !important;
+                }
+
+                @include min(768){
+
+                }
+            }
+        }
     }
 }

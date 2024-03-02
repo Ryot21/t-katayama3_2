@@ -40,8 +40,9 @@
     &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}
     &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}
     &.-gallery{&::before{content: "Gallery"; white-space: nowrap;}}
-
-
+    &.-idea{&::before{content: "floor plan ideas"; white-space: nowrap;}}
+    &.-special{&::before{content: "SPECIAL"; white-space: nowrap;}}
+    
     &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}
 }
 
@@ -72,8 +73,8 @@
                 top: 56%;
             }
         }
-        // 2行の場合(sp/tb-pc)
-        &.-row02{
+        // 2行の場合
+        &.-row02{  //(sp/tb-pc)
             &::after{
                 top: 30%;
                 @include min(768){
@@ -81,13 +82,21 @@
                 }
             }
         }
-        &.-row02_s{
+        &.-row02_s{//(sp)
             &::after{
                 @include max(768){
-                    top: 30%;
+                    top: 28%;
                 }
             }
         }
+        &.-row03_s{
+            &::after{
+                @include max(768){
+                    top: 17%;
+                }
+            }
+        }
+
     }
 }
 

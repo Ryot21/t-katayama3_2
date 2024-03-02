@@ -2,7 +2,7 @@
 .c-footer{
 	width: 100vw;
 	height: auto;
-	margin-bottom: 25%;
+	margin-bottom: 20%;
 	@include min(768){
 		margin-bottom: 5%;
 	}
@@ -32,7 +32,7 @@
 			transform: translateX(-50%);
 			width: 100vw;
 			height: 1px;
-			background: $main-color--b;
+			// background: $main-color--b;
 		}
 	}
 	&__contactArea{
@@ -211,17 +211,17 @@
 				display: block;
 				padding: 5% 0;
 				text-align: center;
-				border: 1px solid $site-color02;
-				background: $site-color02;
+				border: 1px solid $site-color01;
+				background: $site-color01;
 				transition: .5s all;
 				@include min(768){
-					color: $site-color02;
+					color: $site-color01;
 					background: $main-color--w;
 				}
 				span{
 					color: $main-color--w;
 					@include min(768){
-						color: $site-color02;
+						color: $site-color01;
 					}
 				}
 				&:hover{

@@ -267,6 +267,11 @@ h1.s-SS, h2.s-SS, h3.s-SS, h4.s-SS, h5.s-SS, h6.s-SS, p.s-SS, a.s-SS, span.s-SS,
     font-size: clamp(1rem, 2vw, 1.2rem);
   }
 }
+@media (768px >= width) {
+  h1.s-SS.-s12, h2.s-SS.-s12, h3.s-SS.-s12, h4.s-SS.-s12, h5.s-SS.-s12, h6.s-SS.-s12, p.s-SS.-s12, a.s-SS.-s12, span.s-SS.-s12, label.s-SS.-s12, button.s-SS.-s12 {
+    font-size: 1.2rem;
+  }
+}
 h1.s-S, h2.s-S, h3.s-S, h4.s-S, h5.s-S, h6.s-S, p.s-S, a.s-S, span.s-S, label.s-S, button.s-S {
   font-size: 1.1rem;
 }
@@ -2667,6 +2672,16 @@ button.swiper-pagination-bullet {
   margin: auto;
 }
 
+.w80 {
+  width: 80%;
+  margin: auto;
+}
+
+.w60 {
+  width: 60%;
+  margin: auto;
+}
+
 .w55 {
   width: 55%;
   margin: auto;
@@ -2779,12 +2794,19 @@ button.swiper-pagination-bullet {
 .colorBox {
   background: #b5142c;
   padding: 3% 0 6%;
-  border-radius: 5px;
 }
 @media (width >= 768px) {
   .colorBox {
     padding: 3% 0 4%;
   }
+}
+.colorBox.-r {
+  border-radius: 5px;
+}
+.colorBox.-box-b {
+  color: black;
+  background: #ffffff;
+  border: 1px solid black;
 }
 
 .c-header {
@@ -2834,6 +2856,9 @@ button.swiper-pagination-bullet {
   width: 100vw;
   height: 1px;
   background: black;
+}
+.c-header-wrapper.-no-b::after {
+  background: #ffffff;
 }
 .c-header__popArea {
   width: 100%;
@@ -2961,6 +2986,9 @@ button.swiper-pagination-bullet {
   .c-header__navArea .c-header__navLists li.-active a, .c-header__navArea .c-header__navLists li.-active span {
     color: #ffffff;
   }
+  .c-header__navArea .c-header__navLists li.-no-b::before, .c-header__navArea .c-header__navLists li.-no-b::after {
+    background: #ffffff;
+  }
   .c-header__navArea .c-header__navLists li.-grayOutItem {
     pointer-events: none;
   }
@@ -2978,7 +3006,7 @@ button.swiper-pagination-bullet {
 .c-footer {
   width: 100vw;
   height: auto;
-  margin-bottom: 25%;
+  margin-bottom: 20%;
 }
 @media (width >= 768px) {
   .c-footer {
@@ -3015,7 +3043,6 @@ button.swiper-pagination-bullet {
   transform: translateX(-50%);
   width: 100vw;
   height: 1px;
-  background: black;
 }
 .c-footer__contactArea .c-footer__contactLists {
   position: relative;
@@ -3201,13 +3228,13 @@ button.swiper-pagination-bullet {
   display: block;
   padding: 5% 0;
   text-align: center;
-  border: 1px solid #b5142c;
-  background: #b5142c;
+  border: 1px solid #e996a1;
+  background: #e996a1;
   transition: 0.5s all;
 }
 @media (width >= 768px) {
   .c-footer__btnArea label.popup {
-    color: #b5142c;
+    color: #e996a1;
     background: #ffffff;
   }
 }
@@ -3216,7 +3243,7 @@ button.swiper-pagination-bullet {
 }
 @media (width >= 768px) {
   .c-footer__btnArea label.popup span {
-    color: #b5142c;
+    color: #e996a1;
   }
 }
 .c-footer__btnArea label.popup:hover {
@@ -3391,7 +3418,7 @@ button.swiper-pagination-bullet {
   }
 }
 .c-hnav__content li {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   transition: 1s all;
 }
 @media (width >= 768px) {
@@ -3565,7 +3592,7 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .navItem_main {
-  color: #b5142c;
+  color: #e996a1;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -3579,7 +3606,7 @@ button.swiper-pagination-bullet {
   }
 }
 .navItem_main02 {
-  color: #b5142c;
+  color: #e996a1;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -3634,7 +3661,7 @@ button.swiper-pagination-bullet {
 }
 @media (width >= 1400px) {
   .navItem_sub03 {
-    top: 60%;
+    top: 65%;
   }
 }
 .navItem_footer.-active {
@@ -3814,7 +3841,7 @@ button.swiper-pagination-bullet {
   }
 }
 .c-contents.-f-slider .c-contentsBox.-f-topLogo, .c-contents.-f-view .c-contentsBox.-f-topLogo {
-  bottom: 4%;
+  bottom: 7%;
   left: 52%;
   transform: translateX(-50%);
   width: 55%;
@@ -3925,6 +3952,38 @@ button.swiper-pagination-bullet {
 .c-contents.-imgBg .c-contentsBox {
   position: absolute;
 }
+.c-contents.-imgBg .c-contentsBox.-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.c-contents.-imgBg .c-contentsBox.-leftBtm {
+  top: 40%;
+  left: 5%;
+  width: 30%;
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-leftBtm {
+    top: 52%;
+    left: 1%;
+    width: 30%;
+  }
+}
+.c-contents.-imgBg .c-contentsBox.-leftBtm.-ver02 {
+  top: 50%;
+  left: 8%;
+  width: 25%;
+}
+.c-contents.-imgBg .c-contentsBox.-images {
+  bottom: 2%;
+  left: 73%;
+}
+@media (width >= 768px) {
+  .c-contents.-imgBg .c-contentsBox.-images {
+    left: 81%;
+  }
+}
 .c-contents.-imgBg .c-contentsBox.-logo-item01 {
   top: 54%;
   left: 95.5%;
@@ -3988,6 +4047,11 @@ button.swiper-pagination-bullet {
     width: 50%;
     max-width: 650px;
   }
+}
+.c-contents.-imgBg .c-contentsBox.-ideaBox {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .c-contents_title {
@@ -4069,6 +4133,14 @@ button.swiper-pagination-bullet {
   content: "Gallery";
   white-space: nowrap;
 }
+.c-contents_title.-idea::before {
+  content: "floor plan ideas";
+  white-space: nowrap;
+}
+.c-contents_title.-special::before {
+  content: "SPECIAL";
+  white-space: nowrap;
+}
 .c-contents_title.-sample::before {
   content: "CONTENT TITLE";
   white-space: nowrap;
@@ -4115,7 +4187,12 @@ button.swiper-pagination-bullet {
 }
 @media (768px >= width) {
   .c-contents_MainTitle.-icon.-row02_s::after {
-    top: 30%;
+    top: 28%;
+  }
+}
+@media (768px >= width) {
+  .c-contents_MainTitle.-icon.-row03_s::after {
+    top: 17%;
   }
 }
 
@@ -4264,7 +4341,7 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .contactItem_main {
-  color: #b5142c;
+  color: #e996a1;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -4719,7 +4796,21 @@ button.swiper-pagination-bullet {
     width: 82%;
   }
 }
-
+.c-flex.-shop-information_col1_2M1 {
+  flex-wrap: wrap;
+}
+.c-flex.-shop-information_col1_2M1 li:nth-child(1) {
+  width: 100%;
+}
+.c-flex.-shop-information_col1_2M1 li:nth-child(2) {
+  width: 15%;
+}
+.c-flex.-shop-information_col1_2M1 li:nth-child(3) {
+  width: 85%;
+}
+.c-flex.-shop-information_col1_2M1 li:nth-child(2), .c-flex.-shop-information_col1_2M1 li:nth-child(3) {
+  margin: 0 !important;
+}
 .c-tabArea {
   margin: auto;
   text-align: center;

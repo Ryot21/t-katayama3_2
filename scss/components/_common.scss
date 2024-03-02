@@ -27,7 +27,14 @@
     width: 90%;
     margin: auto;
 }
-.w55{
+.w80{
+    width: 80%;
+    margin: auto;
+}
+.w60{
+    width: 60%;
+    margin: auto;
+}.w55{
     width: 55%;
     margin: auto;
 }
@@ -124,8 +131,14 @@
 .colorBox{
     background: $site-color02;
     padding: 3% 0 6%;
-    border-radius: 5px;
-    @include min(768){
-        padding: 3% 0 4%;
+    @include min(768){padding: 3% 0 4%;}
+
+    // 角丸
+    &.-r{border-radius: 5px;}
+    // ボーダー
+    &.-box-b{
+        color: $main-color--b;
+        background: $main-color--w;
+        border: 1px solid $main-color--b;
     }
 }
